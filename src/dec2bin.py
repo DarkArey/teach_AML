@@ -1,6 +1,7 @@
 # The function of converting the signed x from decimal to binary representation
 # The bin_dig indicates the number of binary digits of the x
-# If the bin_dig is less than the required number to represent the x, the ValueError is raised
+# If the bin_dig is less than the required number to represent the x,
+# the ValueError is raised
 def dec2bin(x, bin_dig):
     sign = x < 0
     x = abs(x)
@@ -16,7 +17,9 @@ def dec2bin(x, bin_dig):
             x //= 2
 
     if (len(bin_x) + 1) > bin_dig:
-        raise ValueError('The specified bin_dig is less than the required number to represent the x')
+        raise ValueError(
+            'The specified bin_dig is less than the required number '
+            'to represent the x')
 
     if sign:
         new_bin_x = ''

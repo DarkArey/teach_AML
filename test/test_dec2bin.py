@@ -23,7 +23,9 @@ def test_bin_dig_true():
 
 
 def test_bin_dig_false():
-    with pytest.raises(ValueError, match='The specified bin_dig is less than the required number to represent the x'):
+    with pytest.raises(ValueError,
+                       match='The specified bin_dig is less than the required'
+                             ' number to represent the x'):
         dec2bin(31, 5)
 
 
